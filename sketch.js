@@ -1,4 +1,4 @@
-var dog,sadDog,happyDog, database,data;
+var dog,sadDog,happyDog, database,firebase,data;
 var foodS,foodStock;
 var addFood,feed;
 var foodObj;
