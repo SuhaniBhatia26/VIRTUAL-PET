@@ -13,7 +13,7 @@ happyDog=loadImage("happy dog.png");
 }
 
 function setup() {
-  //database=firebase.database();
+  database=firebase.database();
   createCanvas(1000,400);
 
   foodObj = new Food();
