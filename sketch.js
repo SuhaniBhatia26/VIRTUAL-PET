@@ -18,8 +18,8 @@ function setup() {
 
   foodObj = new Food();
 
-  //foodStock=database.ref('Food');
-  //foodStock.on("value",readStock);
+  foodStock=database.ref('Food');
+  foodStock.on("value",readStock);
   
   dog=createSprite(800,200,150,150);
   dog.addImage(sadDog);
