@@ -3,7 +3,7 @@ var foodS,foodStock;
 var addFood;
 var foodObj;
 
-var feed , lastFed ;
+var feedTime ,feed, lastFed,data ;
 
 
 function preload(){
@@ -43,18 +43,20 @@ function draw() {
   //feedTime = database.ref('FeedTime');
   //feedTime.on("value",function(data){
   //lastFed = data.val();
-   
+  
   fill("red");
   textSize(25);
+  
   if(lastFed>=12){
-    //show time in PM format when lastFed is greater than 12
+    text("Last Feed : "+ lastFed%12 + " PM", 350,30);
   }
   else if(lastFed==0){
     text("Last Feed  : 12 AM",350,30);
   }
   else{
-   //show time in AM format when lastFed is less than 12
+    text("Last Feed : "+ lastFed + " AM", 350,30);
   }
+
 
  
   
@@ -90,7 +92,6 @@ else{
 //function to add food in stock
 function addFoods(){
   foodS++;
-  database.ref('/').update({
+  //database.ref('/').update({
     Food:foodS
-  })
-}
+ }
